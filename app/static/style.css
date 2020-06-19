@@ -1,0 +1,28 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(230, 212, 193);
+
+}
+
+h1{
+    color: rgb(2, 102, 35);
+    text-align: center;
+}
+
+h4{
+    color: rgb(2, 102, 35);
+    font-size: 30px;
+}
+
+.incendies{
+    color: rgb(2, 102, 35);
+    text-align: left;
+}
+img{
+
+    margin-left: 35%;
+    margin-right: 250%;
+    width: 30%;
+    height: 100%;
+    opacity: 0.6;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+</head>
+<link rel="stylesheet" href="static/style.css" />
+<body>
+<p><a href= "{{ url_for('index') }}"> Retourner à la page d’accueil </a></p>
+  <h1 class = 'incendies'>Voici une analyse de l'évolution des incendies en France</h1><br />
+  <p></p>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart" id="scatter">
+            </div>
+        </div>
+        <script src = "https://cdn.plot.ly/plotly-latest.min.js"> </script> 
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5 .6 / d3.min.js "> </script>
+        <div class = "chart" id = "scatter"> 
+            <script> 
+                var graphs = {{plot1 | safe}}; 
+                Plotly.plot ('scatter', graphs, {}); 
+            </script> 
+        </div>
+        <br/>
+        {{corr}} <br/>
+          <h4>Nombres d'incendies par départements sur trois ans</h4>
+            <div class="chart" id="scatter">
+            </div>
+        </div>
+        <script src = "https://cdn.plot.ly/plotly-latest.min.js"> </script> 
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5 .6 / d3.min.js "> </script>
+        <div class = "chart" id = "scatter2"> 
+            <script> 
+                var graphs = {{plot2 | safe}}; 
+                Plotly.plot ('scatter2', graphs, {}); 
+            </script> 
+        </div>
+    </div>
+
+  </div>
+</body>
+</html>

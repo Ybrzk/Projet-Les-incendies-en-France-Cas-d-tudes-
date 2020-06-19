@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head class = 'conteneur'>
+<link rel="stylesheet" href="static/style.css" /> <!--Le css est relié avec le html via ce lien pour faire la mise en page de toute les pages-->
+
+  <p> <!-- picture -->
+   <img src="/static/image/incendies.jpeg" alt = "incendies" />
+  </p>
+
+<title>Bienvenue dans l'API: Interventions incendies et secours</title>
+</head>
+<body>
+
+  <h1>Bienvenue dans l'API: Interventions incendies et secours</h1><br />
+
+
+  <form method = "post" action = "{{ url_for('dashbord') }}"> <!-- Un lien pour envoyer la deuxième route dashbord-->
+    <p>
+        <label for="categorie">Séléctionnez une catégorie d'incendies</label> <!--Création d'une liste de déroulante des categories d'incendies-->
+        <select name="categorie" id="categorie">
+            <option value="1">Feu secs</option>
+            <option value="2">Feu gras</option>
+            <option value="3">Feu de gaz(gaz naturels, gaz de pétrole)</option>
+            <option value="4">Feu de métaux</option>
+            <option value="5">Feu d'origine éléctrique</option>
+        </select>
+    </p><br />
+
+        <label for="annee">Séléctionnez une année</label> <!--Liste déroulante des trois années-->
+        <select name="annee" id="annee">
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option> 
+        </select>
+    </p><br />
+
+        <!--<label for="departement">Séléctionnez un departement</label>
+        <select name="departement" id="departement">
+            <option value="Bouches-du-Rhône">Bouches-du-Rhône</option>
+        </select><br />
+
+         <label for="categorie">Séléctionnez une catégorie de couverture du sol</label><br />
+        <select name="categorie" id="categorie">
+            <option value="1">Couvert boisé fermé</option>
+        </select> -->
+
+
+   <!-- <div class = 'categorie' >
+        <p> Veuillez indiquer la catégorie d'incendies :<br />
+        </select>       
+        <input type="checkbox" name= "feu_secs" value="1" id="feu_secs" /> <label for="feu_secs">Feu secs</label><br />
+        <input type="checkbox" name= "feu_gras" value="2" id="feu_gras" /> <label for="feu_gras">Feu gras</label><br />
+        <input type="checkbox" name= "feu_de_gaz" value="3" id="feu_de_gaz" /> <label for="feu_de_gaz">Feu de gaz(gaz naturels, gaz de pétrole)</label><br />
+        <input type="checkbox" name= "feu_de_metaux" value="4" id="feu_de_metaux" /> <label for="feu_de_metaux">Feu de métaux</label><br />
+        <input type="checkbox" name= "feu_dorigine_electrique" value="5" id="feu_dorigine_electrique" /> <label for="feu_dorigine_electrique">Feu d'origine éléctrique</label><br />
+    </div><br />
+        </p>
+        </select> -->
+
+    <p> <input type="submit" value="Envoyer" /> </p> <!--Création du bouton submit afin d'envoyer à la deuxième page présentant les dashboard-->
+  </form>
+</body>
+<!-- Rien a noter -->
+</html>
